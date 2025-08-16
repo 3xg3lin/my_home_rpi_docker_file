@@ -1,0 +1,59 @@
+- name: Steam
+  width: wide
+  show-mobile-header: true
+  head-widgets:
+    - type: search
+      search-engine: google
+      bangs:
+        - title: Youtube
+          shortcut: "!yt"
+          url: https://www.youtube.com/results?search_query={QUERY}
+        - title: Steam
+          shortcut: "!st"
+          url: https://store.steampowered.com/search/?term={QUERY}
+
+  columns:
+    - size: full
+      widgets: 
+        - type: custom-api
+          title: Steam Specials
+          cache: 6h
+          url: https://store.steampowered.com/api/featuredcategories?cc=us
+          template: |
+            <ul class="list list-gap-20 collapsible-container" data-collapse-after="5">
+            {{ range .JSON.Array "specials.items" }}
+              <li>
+                <a class="size-h2 color-highlight block text-truncate" 
+                   href="https://store.steampowered.com/app/{{ .Int "id" }}/">
+                   {{ .String "name" }}
+                </a>
+                <ul class="list-horizontal-text">
+                  <li>{{ div (.Int "final_price" | toFloat) 100 | printf "$%.2f" }}</li>
+                  {{ $discount := .Int "discount_percent" }}
+                  <li{{ if ge $discount 40 }} class="color-positive"{{ end }}>{{ $discount }}% off</li>
+                </ul>
+              </li>
+            {{ end }}
+            </ul>
+    - size: full
+      widgets:
+        - type: custom-api
+          title: New Releases
+          cache: 6h
+          url: https://store.steampowered.com/api/featuredcategories?cc=us
+          template: |
+            <ul class="list list-gap-20 collapsible-container" data-collapse-after="5">
+            {{ range .JSON.Array "new_releases.items" }}
+              <li>
+                <a class="size-h2 color-highlight block text-truncate" 
+                   href="https://store.steampowered.com/app/{{ .Int "id" }}/">
+                   {{ .String "name" }}
+                </a>
+                <ul class="list-horizontal-text">
+                  <li>{{ div (.Int "final_price" | toFloat) 100 | printf "$%.2f" }}</li>
+                  {{ $discount := .Int "discount_percent" }}
+                  <li{{ if ge $discount 40 }} class="color-positive"{{ end }}>{{ $discount }}% off</li>
+                </ul>
+              </li>
+            {{ end }}
+            </ul>

@@ -1,0 +1,39 @@
+server:
+  assets-path: /app/assets
+
+theme:
+  # Note: assets are cached by the browser, changes to the CSS file
+  # will not be reflected until the browser cache is cleared (Ctrl+F5)
+  #custom-css-file: /assets/user.css
+  #
+  background-color: 231 15 21
+  primary-color: 265 89 79
+  contrast-multiplier: 1.2
+  positive-color: 135 94 66
+  negative-color: 0 100 67
+
+define:
+  - &subreddit-settings
+    type: reddit
+    collapse-after: 5
+
+pages:
+  # It's not necessary to create a new file for each page and include it, you can simply
+  # put its contents here, though multiple pages are easier to manage when separated
+  - name: Main
+    $include: main.yml
+  - name: Reddit
+    show-mobile-header: true
+    width: wide
+    columns:
+      - size: full
+        widgets:          
+          $include: reddit.yml
+  - $include: steam.yml
+  - name: RSS
+    show-mobile-header: true
+    width: wide
+    columns:
+      - size: full
+        widgets:
+          $include: rss.yml

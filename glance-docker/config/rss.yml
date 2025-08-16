@@ -1,0 +1,74 @@
+- type: rss
+  title: Business & Economy
+  style: horizontal-cards-2
+  cache: 12h
+  feeds:
+    - url: https://www.investing.com/rss/news.rss
+      title: All News
+    - url: https://www.youtube.com/feeds/videos.xml?user=Bloomberg
+      title: Bloomberg Quicktake
+
+- type: rss
+  title: Tech
+  cache: 12h
+  style: horizontal-cards-2
+  feeds:
+    - url: https://www.youtube.com/feeds/videos.xml?user=CNETTV
+      title: CNET
+    - url: https://news.ycombinator.com/rss
+      title: Hacker News
+    - url: https://www.youtube.com/feeds/videos.xml?user=LinusTechTips
+      title: Linus Tech Tips
+    - url: https://www.relay.fm/rocket/feed
+      title: Rocket
+    - url: https://thenextweb.com/feed/
+      title: The Next Web
+
+- type: rss
+  title: Programming
+  cache: 12h
+  style: horizontal-cards-2
+  feeds:
+    - url: https://codeascraft.com/feed/atom/
+      title: Code as Craft
+    - url: https://feeds.feedburner.com/codinghorror
+      title: Coding Horror
+    - url: https://feeds.simplecast.com/dLRotFGk
+      title: Developer Tea
+    - url: http://feeds.feedburner.com/GDBcode
+      title: Google Developers Blog
+    - url: https://medium.com/feed/hackernoon
+      title: HackerNoon.com - Medium
+
+- type: rss
+  title: Science
+  cache: 12h
+  style: horizontal-cards-2
+  feeds:
+    - url: http://rss.sciam.com/sciam/60secsciencepodcast
+      title: 60-Second Science
+    - url: http://feeds.bbci.co.uk/news/science_and_environment/rss.xml
+      title: BBC News - Science & Environment
+    - url: http://www.nature.com/nature/current_issue/rss
+      title: Nature
+    - url: https://reddit.com/r/science/.rss
+      title: Reddit Science
+    - url: https://feeds.npr.org/510307/podcast.xml
+      title: Invisibilia
+
+- type: rss
+  title: Gaming
+  cache: 12h
+  style: horizontal-cards-2
+  feeds:
+    - url: https://www.escapistmagazine.com/v2/feed/
+      title: Escapist Magazine
+    - url: https://www.gamespot.com/feeds/mashup/
+      title: GameSpot - All Content
+    - url: https://kotaku.com/rss
+      title: Kotaku
+    - url: http://feeds.feedburner.com/psblog
+      title: PlayStation.Blog
+    - url: https://store.steampowered.com/feeds/news.xml
+      title: Steam RSS News Feed
+
