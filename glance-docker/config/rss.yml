@@ -23,6 +23,12 @@
       title: Rocket
     - url: https://thenextweb.com/feed/
       title: The Next Web
+    - url: https://lifehacker.com/rss
+      title: Lifehacker
+    - url: https://www.blog.google/rss/
+      title: The Keyword
+    - url: http://rss.slashdot.org/Slashdot/slashdotMain
+      title: Slashdot
 
 - type: rss
   title: Programming
@@ -39,12 +45,24 @@
       title: Google Developers Blog
     - url: https://medium.com/feed/hackernoon
       title: HackerNoon.com - Medium
+    - url: https://about.gitlab.com/atom.xml
+      title: GitLab
+    - url: https://www.thecrazyprogrammer.com/category/programming/feed
+      title: Programming – The Crazy Programmer
+    - url: https://stackoverflow.blog/feed/
+      title: Stack Overflow Blog
 
 - type: rss
   title: Science
   cache: 12h
   style: horizontal-cards-2
   feeds:
+    - url: https://podcasts.files.bbci.co.uk/b00snr0w.rss
+      title: The Infinite Monkey Cage
+    - url: https://pa.tedcdn.com/feeds/talks.rss
+      title: TED Talks Daily (SD video)
+    - url: http://feeds.wnyc.org/radiolab
+      title: Radiolab
     - url: http://rss.sciam.com/sciam/60secsciencepodcast
       title: 60-Second Science
     - url: http://feeds.bbci.co.uk/news/science_and_environment/rss.xml
@@ -55,6 +73,22 @@
       title: Reddit Science
     - url: https://feeds.npr.org/510307/podcast.xml
       title: Invisibilia
+    - url: https://phys.org/rss-feed/
+      title: Phys.org
+
+- type: rss
+  title: Space
+  cache: 12h
+  style: horizontal-cards-2
+  feeds:
+    - url: https://www.youtube.com/feeds/videos.xml?user=spacexchannel
+      title: SpaceX
+    - url: https://www.space.com/feeds/all
+      title: Space.com
+    - url: https://www.skyandtelescope.com/feed/
+      title: Sky & Telescope
+    - url: https://www.nasa.gov/rss/dyn/breaking_news.rss
+      title: NASA Breaking News
 
 - type: rss
   title: Gaming
@@ -71,4 +105,8 @@
       title: PlayStation.Blog
     - url: https://store.steampowered.com/feeds/news.xml
       title: Steam RSS News Feed
+    - url: http://feeds.feedburner.com/RockPaperShotgun
+      title: Rock, Paper, Shotgun
+    - url: https://majornelson.com/feed/
+      title: Xbox's Major Nelson
 
