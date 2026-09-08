@@ -1,0 +1,27 @@
+services:
+  pdfding:
+    container_name: pdfding
+    image: mrmn/pdfding:latest
+    volumes:
+      - sqlite_data:/home/nonroot/pdfding/db
+      - media:/home/nonroot/pdfding/media
+    environment:
+      - DEFAULT_THEME=${DEFAULT_THEME:-dark}
+      - DEFAULT_THEME_COLOR=${DEFAULT_THEME_COLOR:-green}
+      - SECRET_KEY=${SECRET_KEY:-some_long_random_secret}
+      # the domain where you want to access PdfDing, e.g. pdfding.com
+      - HOST_NAME=localhost,127.0.0.1,192.168.1.42,0.0.0.0
+      # In production set the following values to True
+      - CSRF_COOKIE_SECURE=FALSE
+      - SESSION_COOKIE_SECURE=FALSE
+      - ACCOUNT_EMAIL_VERIFICATION=FALSE
+      - WORKER_TIMEOUT=600
+    ports:
+      - "8000:8000"
+    restart:
+      unless-stopped
+
+volumes:
+  sqlite_data:
+  media:
+
